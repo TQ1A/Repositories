@@ -10,13 +10,16 @@ namespace Task3
     {
         static void Main()
         {
+            // TODO: CR: Маркин Евгений: не нужно создавать лишние экземпляры классов, тем более если ты ими не пользуешься
             ProDocumentWorker pdocw = new ProDocumentWorker();
             ExpertDocumentWorker edocw = new ExpertDocumentWorker();
             DocumentWorker docw = new DocumentWorker();
             switch (CodeListener())
             {
-                case "Pro-123":
+                case "Pro-123": 
                     Console.WriteLine("\nЗагрузка Professional версии...\n" + new String('=', 50));
+                    // TODO: CR: Маркин Евгений: тут должно быть только создание типов ProDocumentWorker, ExpertDocumentWorker или DocumentWorker
+                    // вызов методов нужно осуществлять вне конструкции switch 
                     docw.OpenDocument();
                     pdocw.EditDocument();
                     pdocw.SaveDocument();

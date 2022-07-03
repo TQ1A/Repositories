@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitHub\\Repositories\\Tasks\\Task3\\Task3.csproj": {}
+    "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\Task3.csproj": {}
   },
   "projects": {
-    "E:\\GitHub\\Repositories\\Tasks\\Task3\\Task3.csproj": {
+    "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\Task3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitHub\\Repositories\\Tasks\\Task3\\Task3.csproj",
+        "projectUniqueName": "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\Task3.csproj",
         "projectName": "Task3",
-        "projectPath": "E:\\GitHub\\Repositories\\Tasks\\Task3\\Task3.csproj",
-        "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
-        "outputPath": "E:\\GitHub\\Repositories\\Tasks\\Task3\\obj\\",
+        "projectPath": "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\Task3.csproj",
+        "packagesPath": "C:\\Users\\GTR\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Andrew\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GTR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Wss\\crypto\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
