@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\GTR\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrew\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\Task3.csproj",
+      "projectUniqueName": "E:\\GitHub\\Repositories\\Tasks\\Task3\\Task3.csproj",
       "projectName": "Task3",
-      "projectPath": "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\Task3.csproj",
-      "packagesPath": "C:\\Users\\GTR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\GTR\\source\\repos\\Repositories\\Tasks\\Task3\\obj\\",
+      "projectPath": "E:\\GitHub\\Repositories\\Tasks\\Task3\\Task3.csproj",
+      "packagesPath": "C:\\Users\\Andrew\\.nuget\\packages\\",
+      "outputPath": "E:\\GitHub\\Repositories\\Tasks\\Task3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\GTR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrew\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Wss\\crypto\\packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
