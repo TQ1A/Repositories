@@ -10,48 +10,39 @@ namespace Task3
     {
         static void Main()
         {
-            // TODO: CR: Маркин Евгений: есть правило единой ответвенности (из принципов SOLID),
-            // в соответствии с которым каждая операция должна быть отдельным методом
-            // в данном случаи есть 2 операции.
-            // 1. switch с созданием DocumentWorker
-            // 2. использование DocumentWorker
-            // сделай методы c сигнатурой DocumentWorker CreateDocumentWorker(); и void ProcessDocument(DocumentWorker doc);
-
-            // TODO: CR: Маркин Евгений: старые коментарии убирай, их можно посмотреть в истории
-            // TODO: CR: Маркин Евгений: не нужно создавать лишние экземпляры классов, тем более если ты ими не пользуешься
-            switch (CodeListener())
-            {
-                case "Pro-123": 
-                    Console.WriteLine("\nЗагрузка Professional версии...\n" + new String('=', 50));
-                    // TODO: CR: Маркин Евгений: тут должно быть только создание типов ProDocumentWorker, ExpertDocumentWorker или DocumentWorker
-                    // вызов методов нужно осуществлять вне конструкции switch 
-                    DocLoader(new ProDocumentWorker());
-                    break;
-
-                case "Exp-123":
-                    Console.WriteLine("\nЗагрузка Expert версии...\n" + new String('=', 50));
-                    // TODO: CR: Маркин Евгений: метод в методе вызывать плохая практика, нужно разделять вызовы методов.
-                    DocLoader(new ExpertDocumentWorker());
-                    break;
-
-                default: 
-                    Console.WriteLine("\nЗагрузка Trial версии...\n" + new String('=',50));
-                    DocLoader(new DocumentWorker());
-                    break;
-            }
+            ProcessDocument();
         }
 
-        // TODO: CR: Маркин Евгений: название метода не очевидно, на мой взгляд лучше подойдел ProcessDocument или любое другое по аналогии.
-        static void DocLoader(DocumentWorker docw)
+        static void ProcessDocument()
         {
-            docw.OpenDocument();
-            docw.EditDocument();
-            docw.SaveDocument();
-        }// TODO: CR: Маркин Евгений: тут нужно сделать пустую строку, так красивее
+            DocumentWorker doc = CreateDocumentWorker();
+            doc.OpenDocument();
+            doc.EditDocument();
+            doc.SaveDocument();
+        }
+
         static string CodeListener()
         {
             Console.WriteLine("Введите ключ продукта");
             return Console.ReadLine();
+        }
+
+        static DocumentWorker CreateDocumentWorker()
+        {
+            switch (CodeListener())
+            {
+                case "Pro-123":
+                    Console.WriteLine("\nЗагрузка Professional версии...\n" + new String('=', 50));
+                    return new ProDocumentWorker();
+
+                case "Exp-123":
+                    Console.WriteLine("\nЗагрузка Expert версии...\n" + new String('=', 50));
+                    return new ExpertDocumentWorker();
+
+                default:
+                    Console.WriteLine("\nЗагрузка Trial версии...\n" + new String('=', 50));
+                    return new DocumentWorker();
+            }
         }
     }
 }
