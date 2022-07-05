@@ -11,9 +11,11 @@ namespace Task3
         static void Main()
         {
             // TODO: CR: Маркин Евгений: есть правило единой ответвенности (из принципов SOLID),
-            // в соответствии с которым создание каждая операция должна быть отдельным методом
-            // в данном случаи есть 2 операции 1. switch с созданием DocumentWorker 2. использование DocumentWorker
-            // сделай метод c сигнатурой DocumentWorker CreateDocumentWorker(); и void ProcessDocument(DocumentWorker doc);
+            // в соответствии с которым каждая операция должна быть отдельным методом
+            // в данном случаи есть 2 операции.
+            // 1. switch с созданием DocumentWorker
+            // 2. использование DocumentWorker
+            // сделай методы c сигнатурой DocumentWorker CreateDocumentWorker(); и void ProcessDocument(DocumentWorker doc);
 
             // TODO: CR: Маркин Евгений: старые коментарии убирай, их можно посмотреть в истории
             // TODO: CR: Маркин Евгений: не нужно создавать лишние экземпляры классов, тем более если ты ими не пользуешься
