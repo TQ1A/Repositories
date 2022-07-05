@@ -10,6 +10,12 @@ namespace Task3
     {
         static void Main()
         {
+            // TODO: CR: Маркин Евгений: есть правило единой ответвенности (из принципов SOLID),
+            // в соответствии с которым создание каждая операция должна быть отдельным методом
+            // в данном случаи есть 2 операции 1. switch с созданием DocumentWorker 2. использование DocumentWorker
+            // сделай метод c сигнатурой DocumentWorker CreateDocumentWorker(); и void ProcessDocument(DocumentWorker doc);
+
+            // TODO: CR: Маркин Евгений: старые коментарии убирай, их можно посмотреть в истории
             // TODO: CR: Маркин Евгений: не нужно создавать лишние экземпляры классов, тем более если ты ими не пользуешься
             switch (CodeListener())
             {
@@ -22,6 +28,7 @@ namespace Task3
 
                 case "Exp-123":
                     Console.WriteLine("\nЗагрузка Expert версии...\n" + new String('=', 50));
+                    // TODO: CR: Маркин Евгений: метод в методе вызывать плохая практика, нужно разделять вызовы методов.
                     DocLoader(new ExpertDocumentWorker());
                     break;
 
@@ -31,12 +38,14 @@ namespace Task3
                     break;
             }
         }
+
+        // TODO: CR: Маркин Евгений: название метода не очевидно, на мой взгляд лучше подойдел ProcessDocument или любое другое по аналогии.
         static void DocLoader(DocumentWorker docw)
         {
             docw.OpenDocument();
             docw.EditDocument();
             docw.SaveDocument();
-        }
+        }// TODO: CR: Маркин Евгений: тут нужно сделать пустую строку, так красивее
         static string CodeListener()
         {
             Console.WriteLine("Введите ключ продукта");
@@ -44,6 +53,9 @@ namespace Task3
         }
     }
 }
+
+// TODO: CR: Маркин Евгений: давай лучше это оставим перед названием класса или namespace, коментарии все пишутся перед кодом, так принято
+
 //Используя Visual Studio, создайте проект по шаблону Console Application. 
 //Требуется: 
 //Создайте класс DocumentWorker. 
