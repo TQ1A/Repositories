@@ -20,13 +20,6 @@ namespace Task3
             doc.EditDocument();
             doc.SaveDocument();
         }
-
-        static string CodeListener()
-        {
-            Console.WriteLine("Введите ключ продукта");
-            return Console.ReadLine();
-        }
-
         static DocumentWorker CreateDocumentWorker()
         {
             switch (CodeListener())
@@ -44,6 +37,12 @@ namespace Task3
                     return new DocumentWorker();
             }
         }
+        static string CodeListener()
+        {
+            Console.WriteLine("Введите ключ продукта");
+            return Console.ReadLine();
+        }
+
     }
 }
 
