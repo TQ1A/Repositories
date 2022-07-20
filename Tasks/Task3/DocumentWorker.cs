@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task3
+﻿namespace Task3
 {
-    class DocumentWorker
+    internal class DocumentWorker
     {
+        public string Property { get; internal set; }
+
+        private string _property;
+        public string Property2
+        {
+            get
+            {
+                return _property;
+            }
+            private set
+            {
+                _property = value;
+            }
+        } 
+
         public virtual void OpenDocument()
         {
             Console.WriteLine("Документ открыт");
