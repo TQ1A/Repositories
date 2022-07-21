@@ -1,5 +1,10 @@
 ﻿namespace Task5
 {
+    // TODO: CR: Маркин Евгений: У тебя тема массивы и индексаторы,
+    // надо сделать поиск по индексу и названию через индексатор,
+    // public string this[int index] { get { ... } } и
+    // public string this[string index] { get { ... } } соответственно
+
     internal class Store
     {
         private Article[] item = new Article[4];
