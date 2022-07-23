@@ -21,9 +21,11 @@
             Console.WriteLine(new String('-',50));
 
             if (Int32.TryParse(name, out int index))
+                // TODO: CR: Маркин Евгений: 1. для чего лишние скобки? 
                 Console.WriteLine(new Store()[(index)]);
             else
                 Console.WriteLine(new Store()[(name)]);
+
 
             Console.WriteLine(new String('-',50));
         }
