@@ -20,7 +20,10 @@
             string name = Console.ReadLine();
             Console.WriteLine(new String('-',50));
 
-            Console.WriteLine(new Store().Search(name));
+            if (Int32.TryParse(name, out int index))
+                Console.WriteLine(new Store()[(index)]);
+            else
+                Console.WriteLine(new Store()[(name)]);
 
             Console.WriteLine(new String('-',50));
         }

@@ -17,45 +17,36 @@
             item[2].item_name = "apple"; item[2].store_name = "Sweet Home"; item[2].price_uah = 5.00;
             item[3].item_name = "pants"; item[3].store_name = "Lee yu-e"; item[3].price_uah = 40.00;
         }
-
-        public string Search(string name)
+        
+        public string this[int index]
         {
-            if (Int32.TryParse(name, out int index))
+            get
             {
-                return IndexSearch(index);
-            }
-            else
-            {
-                return NameSearch(name);
-            }
-        }
-
-        private string IndexSearch(int index)
-        {
-            if (index >= 0 && index <= 3)
-            {
-                return "Имя: " + item[index].item_name
-                    + "\nНазвание магазина: " + item[index].store_name
-                    + "\nЦена(грн): " + item[index].price_uah;
-            }
-            else
-            {
+                if(index >= 0 && index <= 3)
+                {
+                    return "Имя: " + item[index].item_name
+                        + "\nНазвание магазина: " + item[index].store_name
+                        + "\nЦена(грн): " + item[index].price_uah;
+                }
                 return "Такого товара не существует!";
             }
         }
-
-        private string NameSearch(string name)
+        
+        public string this[string name]
         {
-            for (int i = 0; i <= 3; i++)
+            get
             {
-                if (item[i].item_name == name)
+                for (int i = 0; i <= 3; i++)
                 {
-                    return "Имя: " + item[i].item_name
-                        + "\nНазвание магазина: " + item[i].store_name
-                        + "\nЦена(грн): " + item[i].price_uah;
+                    if (item[i].item_name == name)
+                    {
+                        return "Имя: " + item[i].item_name
+                            + "\nНазвание магазина: " + item[i].store_name
+                            + "\nЦена(грн): " + item[i].price_uah;
+                    }
                 }
+                return "Такого товара не существует!";
             }
-            return "Такого товара не существует!";
         }
     }
 }
