@@ -6,9 +6,7 @@
         private string _store_name;
         private double _price_uah;
 
-        // TODO: CR: Маркин Евгений: 1. давай договоримся, свойства с большой буквы
-        // 2. в данном случаи можно обойтись автосвойствами, public string Name { get; set; }
-        public string item_name
+        public string Item_Name
         {
             get
             {
@@ -20,7 +18,7 @@
             }
         }
 
-        public string store_name
+        public string Store_Name
         {
             get
             {
@@ -32,7 +30,7 @@
             }
         }
 
-        public double price_uah
+        public double Price_UAH
         {
             get
             {
