@@ -21,7 +21,14 @@
         {
             Store store = new Store();
 
-            Console.WriteLine(store.SorterByPrice());
+            Console.WriteLine($"{"Name",-15}|{"Price",-15}");
+
+            foreach (Product product in store.SorterByPrice())
+            {
+                Console.WriteLine($"{product.Name,-15}|{product.Price,-15}");
+            }
+
+            Console.ReadLine();
         }
     }
 }

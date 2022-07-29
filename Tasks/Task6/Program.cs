@@ -16,9 +16,7 @@
         {
             int[] numbers = new int[] { 10, 2, 6, 3, 4, 7, 8, 9, 1, 5 };
 
-            // TODO: CR: Маркин Евгений: метод расширения должен вызываться так
-            // numbers.IntSorter();
-            string result = string.Join(" ",Array.ConvertAll(Sorter.IntSorter(numbers), x => x.ToString()));
+            string result = string.Join(" ",Array.ConvertAll(numbers.IntSorter(), x => x.ToString()));
 
             Console.WriteLine(result);
         }
