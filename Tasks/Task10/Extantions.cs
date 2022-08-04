@@ -4,16 +4,12 @@
     {
         public static T[] GetArray<T>(this MyList<T> list)
         {
-            T[] array = new T[list.GetList().Count()];
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = list.GetList().IndexOf(i);
-            }
+            object objlist = list.GetList().ToArray();
+            T[] array = new T[0];
+            object objarray = array;
+            objarray = objlist;
+            array = (T[])objarray;
             return array;
-        }
-        private static void IntToGeneric<T>(ref T value)
-        {
-            value 
         }
     }
 }
