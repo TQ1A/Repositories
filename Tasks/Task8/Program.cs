@@ -20,11 +20,11 @@
         private static void Main()
         {
             Accauntant accauntant = new Accauntant();
-            Post position;
 
             Console.Write("Введите должность сотрудника: ");
             string positionStr = Console.ReadLine();
 
+            Post position;
             while (!Enum.TryParse(positionStr, true, out position))
             {
                 Console.Write("Такой должности не существует, повторите попытку!: ");
