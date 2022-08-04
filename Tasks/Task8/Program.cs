@@ -22,7 +22,12 @@
             Accauntant accauntant = new Accauntant();
 
             Console.Write("Введите должность сотрудника: ");
+            // TODO: CR: Маркин Евгений: worker - работник, position - должность
             string worker = Console.ReadLine();
+
+            // TODO: CR: Маркин Евгений: ты два раза преобразуешь строку к перечислению (IsDefined и StringToPost), это можно сделать за один раз
+            //while (!Enum.TryParse(positionStr, true, out Post position))
+
 
             while (!Enum.IsDefined(typeof(Post), worker))
             {
@@ -31,9 +36,10 @@
             }
 
             Console.Write("Введите часы рыботы сотрудника: ");
+            // TODO: CR: Маркин Евгений: вызывать метод в методе плохая практика, сделай локальную переменную 
             int hours = Int32.Parse(Console.ReadLine());
 
-            if(accauntant.AskForBonus(StringToPost(worker), hours))
+            if (accauntant.AskForBonus(StringToPost(worker), hours))
             {
                 Console.WriteLine("Сотрудник отработал больше установленных часов, ему положенна премия.");
             }
@@ -43,6 +49,7 @@
             }
         }
 
+        // TODO: CR: Маркин Евгений: лишний метод, можно использовать Enum.Parse или Enum.TryParse
         public static Post StringToPost(string worker)
         {
             switch (worker)

@@ -17,13 +17,15 @@
     internal class Program
     {
         delegate int MidValue(DelegatesArray.RandomNumber[] random);
+
         static DelegatesArray _delegatesArray = new DelegatesArray();
 
         static void Main()
-        {
+        { 
             Console.WriteLine(midValue(_delegatesArray.DSRN));
         }
 
+        // TODO: CR: Маркин Евгений: поле с маленькой буквы с подчеркиванием, либо сделай переменной в методе Main
         static MidValue midValue = delegate (DelegatesArray.RandomNumber[] arr)
         {
             int sum = 0;
