@@ -22,11 +22,10 @@
 
         static void Main()
         { 
-            Console.WriteLine(midValue(_delegatesArray.DSRN));
+            Console.WriteLine(_midValue(_delegatesArray.DSRN));
         }
 
-        // TODO: CR: Маркин Евгений: поле с маленькой буквы с подчеркиванием, либо сделай переменной в методе Main
-        static MidValue midValue = delegate (DelegatesArray.RandomNumber[] arr)
+        static MidValue _midValue = delegate (DelegatesArray.RandomNumber[] arr)
         {
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)

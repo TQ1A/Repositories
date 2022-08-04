@@ -20,48 +20,25 @@
         private static void Main()
         {
             Accauntant accauntant = new Accauntant();
+            Post position;
 
             Console.Write("Введите должность сотрудника: ");
-            // TODO: CR: Маркин Евгений: worker - работник, position - должность
-            string worker = Console.ReadLine();
+            string positionStr = Console.ReadLine();
 
-            // TODO: CR: Маркин Евгений: ты два раза преобразуешь строку к перечислению (IsDefined и StringToPost), это можно сделать за один раз
-            //while (!Enum.TryParse(positionStr, true, out Post position))
-
-
-            while (!Enum.IsDefined(typeof(Post), worker))
+            while (!Enum.TryParse(positionStr, true, out position))
             {
                 Console.Write("Такой должности не существует, повторите попытку!: ");
-                worker = Console.ReadLine();
+                positionStr = Console.ReadLine();
             }
 
             Console.Write("Введите часы рыботы сотрудника: ");
-            // TODO: CR: Маркин Евгений: вызывать метод в методе плохая практика, сделай локальную переменную 
-            int hours = Int32.Parse(Console.ReadLine());
+            string hoursStr = Console.ReadLine();
+            int hours = Int32.Parse(hoursStr);
 
-            if (accauntant.AskForBonus(StringToPost(worker), hours))
-            {
+            if (accauntant.AskForBonus(position, hours))
                 Console.WriteLine("Сотрудник отработал больше установленных часов, ему положенна премия.");
-            }
             else
-            {
                 Console.WriteLine("Сотрудник не отработал больше установленных часов, ему не положенна премия.");
-            }
-        }
-
-        // TODO: CR: Маркин Евгений: лишний метод, можно использовать Enum.Parse или Enum.TryParse
-        public static Post StringToPost(string worker)
-        {
-            switch (worker)
-            {
-                case "Manager":
-                    return Post.Manager;
-                case "Secretary":
-                    return Post.Secretary;
-                case "Dispather":
-                    return Post.Dispather;
-            }
-            return 0;
         }
     }
 }
