@@ -15,7 +15,8 @@ namespace Task12_WPF
 
         private void MainWindow_MathAction(object? sender, EventArgs e)
         {
-            this.mainWindow.TextBox1.Text = this.model.SymbolAction(this.mainWindow._old_text, Double.Parse(this.mainWindow.TextBox1.Text), this.mainWindow._math_symbol).ToString();
+            string result = this.model.SymbolAction(this.mainWindow._old_text, Double.Parse(this.mainWindow.TextBox1.Text), this.mainWindow._math_symbol).ToString();
+            this.mainWindow.TextBox1.Text = result;
         }
     }
 }
