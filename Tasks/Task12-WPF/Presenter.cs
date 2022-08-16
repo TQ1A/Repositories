@@ -3,24 +3,22 @@ namespace Task12_WPF
 {
     internal class Presenter
     {
-        // TODO: CR: Маркин Евгений: 1. поля с _
-        // readonly
-        Model model;
-        MainWindow mainWindow;
+        readonly Model _model = new Model();
+        readonly MainWindow _mainWindow;
 
         public Presenter(MainWindow mainWindow)
         {
-            // TODO: CR: Маркин Евгений: this. не используем
-            this.mainWindow = mainWindow;
-            this.model = new Model();
-            this.mainWindow.MathAction += MainWindow_MathAction;
+            _mainWindow = mainWindow;
+            _mainWindow.MathAction += MainWindow_MathAction;
         }
 
         private void MainWindow_MathAction(object? sender, EventArgs e)
         {
-            // TODO: CR: Маркин Евгений: нужно расписать каждое действие построчно.
-            string result = this.model.SymbolAction(this.mainWindow._old_text, Double.Parse(this.mainWindow.TextBox1.Text), this.mainWindow._math_symbol).ToString();
-            this.mainWindow.TextBox1.Text = result;
+            double first = _mainWindow._old_text;
+            double second = Double.Parse(_mainWindow.TextBox1.Text);
+            char math_symbol = _mainWindow._math_symbol;
+            string result = _model.SymbolAction(first, second, math_symbol).ToString();
+            _mainWindow.TextBox1.Text = result;
         }
     }
 }

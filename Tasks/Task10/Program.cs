@@ -10,6 +10,7 @@
         static void Main()
         {
             MyList<int> myList = new MyList<int>();
+            myList.AddRange(new int[] {1,2,3,4 });
 
             foreach (int item in myList.GetArray())
             {

@@ -1,6 +1,6 @@
 ﻿namespace Task11
 {
-    internal class CarCollection<T,R>
+    internal class CarCollection<T,R> where T : struct where R : class
     {
         public int Count
         {
