@@ -20,8 +20,7 @@ namespace Task14
             }
         }
 
-        // TODO: CR: Маркин Евгений: если тип элемента колекции известен то лучше описывать его явно. IEnumerable<int>
-        public static IEnumerable Checker(int[] array)
+        public static IEnumerable<int> Checker(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
